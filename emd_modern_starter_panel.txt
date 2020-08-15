@@ -1,0 +1,299 @@
+@name EMD Modern Starter Panel
+@inputs Startup1 Shutdown1 Isolation1 FuelPump LocalControl Radio GenField LebComputer Utilities On
+@outputs EngineStart EngineStop IsolationOut
+@persist 
+@trigger 
+
+#made by 24!!
+
+if(first()|dupefinished()){
+
+A = 0
+holoCreate(A)
+holoModel(A,"models/sprops/rectangles_thin/size_2_5/rect_18x24x1_5.mdl")
+holoPos(A,entity():toWorld(vec(0,0,0)))
+holoAng(A,entity():toWorld(ang(0,90,0)))
+holoParent(A,entity())
+holoMaterial(A,"models/proppertextures/enamel_black")
+
+#--------Start/Stop/Isolation Decals--------
+
+A = 1
+holoCreate(A)
+holoModel(A,"plane")
+holoPos(A,entity():toWorld(vec(0,0,1)))
+holoAng(A,entity():toWorld(ang(0,0,0)))
+holoScale(A,vec(0.5))
+holoColor(A,vec(255,0,0))
+holoParent(A,entity())
+holoMaterial(A,"")
+
+A = 2
+holoCreate(A)
+holoModel(A,"plane")
+holoPos(A,entity():toWorld(vec(0,0,1.1)))
+holoAng(A,entity():toWorld(ang(0,0,0)))
+holoScale(A,vec(0.5))
+holoColor(A,vec(255))
+holoParent(A,entity())
+holoMaterial(A,"basic_lables/ge_engine_stop")
+
+A = 3
+holoCreate(A)
+holoModel(A,"plane")
+holoPos(A,entity():toWorld(vec(0,-8,1)))
+holoAng(A,entity():toWorld(ang(0,0,0)))
+holoScale(A,vec(0.5))
+holoColor(A,vec(255))
+holoParent(A,entity())
+holoMaterial(A,"basic_lables/ge_engine_start")
+
+A = 4
+holoCreate(A)
+holoModel(A,"plane")
+holoPos(A,entity():toWorld(vec(0,8,1)))
+holoAng(A,entity():toWorld(ang(0,0,0)))
+holoScale(A,vec(0.5))
+holoColor(A,vec(255))
+holoParent(A,entity())
+holoMaterial(A,"basic_lables/isolation_decal")
+
+#--------Starter/Shutdown/Isolation--------
+
+A = 5
+holoCreate(A)
+holoModel(A,"models/jazzie/trains/locomotives/emd/cab/control_panel_switch1.mdl")
+holoPos(A,entity():toWorld(vec(0,6.5,1)))
+holoAng(A,entity():toWorld(ang(0,0,0)))
+holoScale(A,vec(1))
+holoColor(A,vec(255))
+holoParent(A,entity())
+holoMaterial(A,"")
+
+A = 6
+holoCreate(A)
+holoModel(A,"models/monkcabdetailpack/misc/pushbuttonbig.mdl")
+holoPos(A,entity():toWorld(vec(0,0,0.5)))
+holoAng(A,entity():toWorld(ang(0,0,0)))
+holoScale(A,vec(1))
+holoColor(A,vec(255,0,0))
+holoParent(A,entity())
+holoMaterial(A,"")
+
+A = 7
+holoCreate(A)
+holoModel(A,"models/monkcabdetailpack/misc/pushbuttonbig.mdl")
+holoPos(A,entity():toWorld(vec(0,-8,0.5)))
+holoScale(A,vec(1))
+holoColor(A,vec(0))
+holoParent(A,entity())
+holoMaterial(A,"")
+
+#--------Breaker Panel--------
+
+A = 8
+holoCreate(A)
+holoModel(A,"models/titus's_propper_model_pack_2.4/propper/circuitbreakers/breaker_dual.mdl")
+holoPos(A,entity():toWorld(vec(-6.5,0,0.5)))
+holoAng(A,entity():toWorld(ang(0,-90,90)))
+holoScale(A,vec(1))
+holoColor(A,vec(255))
+holoParent(A,entity())
+holoMaterial(A,"")
+
+A = 9
+holoCreate(A)
+holoModel(A,"models/titus's_propper_model_pack_2.4/propper/circuitbreakers/breaker_dual.mdl")
+holoPos(A,entity():toWorld(vec(-6.5,2,0.5)))
+holoAng(A,entity():toWorld(ang(0,-90,90)))
+holoScale(A,vec(1))
+holoColor(A,vec(255))
+holoParent(A,entity())
+holoMaterial(A,"")
+
+A = 10
+holoCreate(A)
+holoModel(A,"models/titus's_propper_model_pack_2.4/propper/circuitbreakers/breaker_dual.mdl")
+holoPos(A,entity():toWorld(vec(-6.5,4,0.5)))
+holoAng(A,entity():toWorld(ang(0,-90,90)))
+holoScale(A,vec(1))
+holoColor(A,vec(255))
+holoParent(A,entity())
+holoMaterial(A,"")
+
+A = 11
+holoCreate(A)
+holoModel(A,"models/titus's_propper_model_pack_2.4/propper/circuitbreakers/breaker_dual.mdl")
+holoPos(A,entity():toWorld(vec(-6.5,6,0.5)))
+holoAng(A,entity():toWorld(ang(0,-90,90)))
+holoScale(A,vec(1))
+holoColor(A,vec(255))
+holoParent(A,entity())
+holoMaterial(A,"")
+
+A = 12
+holoCreate(A)
+holoModel(A,"models/titus's_propper_model_pack_2.4/propper/circuitbreakers/breaker_dual.mdl")
+holoPos(A,entity():toWorld(vec(-6.5,8,0.5)))
+holoAng(A,entity():toWorld(ang(0,-90,90)))
+holoScale(A,vec(1))
+holoColor(A,vec(255))
+holoParent(A,entity())
+holoMaterial(A,"")
+
+A = 13
+holoCreate(A)
+holoModel(A,"models/titus's_propper_model_pack_2.4/propper/circuitbreakers/breaker_dual.mdl")
+holoPos(A,entity():toWorld(vec(-6.5,10,0.5)))
+holoAng(A,entity():toWorld(ang(0,-90,90)))
+holoScale(A,vec(1))
+holoColor(A,vec(255))
+holoParent(A,entity())
+holoMaterial(A,"")
+
+#--------Breaker Labels--------
+
+A = 14
+holoCreate(A)
+holoModel(A,"plane")
+holoPos(A,entity():toWorld(vec(-4.8,0,1)))
+holoAng(A,entity():toWorld(ang(0,0,0)))
+holoScale(A,vec(0.1))
+holoColor(A,vec(255))
+holoParent(A,entity())
+holoMaterial(A,"cubics_pack/breakers/fuel_pump")
+
+A = 15
+holoCreate(A)
+holoModel(A,"plane")
+holoPos(A,entity():toWorld(vec(-4.8,2,1)))
+holoAng(A,entity():toWorld(ang(0,0,0)))
+holoScale(A,vec(0.2))
+holoColor(A,vec(255))
+holoParent(A,entity())
+holoMaterial(A,"cubics_pack/breakers/local_control")
+
+A = 16
+holoCreate(A)
+holoModel(A,"plane")
+holoPos(A,entity():toWorld(vec(-4.8,4,1)))
+holoAng(A,entity():toWorld(ang(0,0,0)))
+holoScale(A,vec(0.2))
+holoColor(A,vec(255))
+holoParent(A,entity())
+holoMaterial(A,"cubics_pack/breakers/radio")
+
+A = 17
+holoCreate(A)
+holoModel(A,"plane")
+holoPos(A,entity():toWorld(vec(-4.8,6,1)))
+holoAng(A,entity():toWorld(ang(0,0,0)))
+holoScale(A,vec(0.3))
+holoColor(A,vec(255))
+holoParent(A,entity())
+holoMaterial(A,"cubics_pack/breakers/generator_field")
+
+A = 18
+holoCreate(A)
+holoModel(A,"plane")
+holoPos(A,entity():toWorld(vec(-4.8,8,1)))
+holoAng(A,entity():toWorld(ang(0,0,0)))
+holoScale(A,vec(0.15))
+holoColor(A,vec(255))
+holoParent(A,entity())
+holoMaterial(A,"cubics_pack/breakers/leb_computer")
+
+A = 19
+holoCreate(A)
+holoModel(A,"plane")
+holoPos(A,entity():toWorld(vec(-4.8,10,1)))
+holoAng(A,entity():toWorld(ang(0,0,0)))
+holoScale(A,vec(0.15))
+holoColor(A,vec(255))
+holoParent(A,entity())
+holoMaterial(A,"cubics_pack/breakers/utilities")
+}
+
+#--------button shit--------
+
+if(Startup1 == 1){
+holoBodygroup(7,1,2)
+}else{
+holoBodygroup(7,1,0)
+}
+
+if(Shutdown1 == 1){
+holoBodygroup(6,1,2)
+}else{
+holoBodygroup(6,1,0)
+}
+
+if(Isolation1 == 1){
+holoAng(5,entity():toWorld(ang(0,270,0)))
+}else{
+holoAng(5,entity():toWorld(ang(0,180,0)))
+}
+
+#--------breaker shit--------
+
+if(FuelPump == 1){
+holoBodygroup(8,1,1)
+}else{
+holoBodygroup(8,1,0)
+}
+
+if(LocalControl == 1){
+holoBodygroup(9,1,1)
+}else{
+holoBodygroup(9,1,0)
+}
+
+if(Radio == 1){
+holoBodygroup(10,1,1)
+}else{
+holoBodygroup(10,1,0)
+}
+
+if(GenField == 1){
+holoBodygroup(11,1,1)
+}else{
+holoBodygroup(11,1,0)
+}
+
+if(LebComputer == 1){
+holoBodygroup(12,1,1)
+}else{
+holoBodygroup(12,1,0)
+}
+
+if(Utilities == 1){
+holoBodygroup(13,1,1)
+}else{
+holoBodygroup(13,1,0)
+}
+
+#--------Startup/Shutdown/Isolation Thing--------
+
+if(FuelPump & Startup1 == 1){
+EngineStart=1
+}else{
+EngineStart=0
+} 
+
+if(FuelPump == 0 & On == 1){
+EngineStop=1
+}elseif(FuelPump == 1 & On == 1){
+EngineStop=0
+}
+
+if(Shutdown1 == 1){
+EngineStop=1
+}elseif(Shutdown1 == 0){
+EngineStop=0
+}
+
+if(LocalControl & Isolation1 == 1){
+IsolationOut=1
+}else{
+IsolationOut=0
+}
